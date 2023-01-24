@@ -649,12 +649,14 @@ size = len(words)
 
 
 def getPart(word):
-    i = random.randint(3, 6)
-    if len(word) < i + 2:
-        i = 3
-    index = random.randint(1, len(word) - i - 1)
-    print(word[index:index + i])
-
+    while(True):
+        size = random.randint(3, 5)
+        if len(word) < size + 2:
+            size = 3
+        index = random.randint(1, len(word) - size - 1)
+        print(word[index:index + size])
+        input()
+        print(word)
 
 i = random.randint(0, size)
 getPart(words[i])
